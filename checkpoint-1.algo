@@ -1,0 +1,31 @@
+ALGORITHM sentence
+VAR
+str : string; 
+count_char : INTEGER :=0;
+count_words : INTEGER :=0;
+count_vowels : INTEGER :=0;
+
+BEGIN
+
+REPEAT
+    Read (str)
+UNTIL (str[str.length]==".")
+
+FOR i FROM 1 to (str.length) DO :
+
+count_char = count_char + 1
+IF str[i]==" " THEN
+count_words = count_words + 1
+END IF
+IF str[i]== "a" OR str[i]== "o" OR str[i]== "e" OR str[i]== "u" OR str[i]== "i" OR str[i]== "y" THEN 
+count_vowels = count_vowels +1
+END IF 
+END FOR 
+
+ write (count_char)
+ write (count_words)
+ write (count_vowels)
+
+END
+
+
